@@ -1,5 +1,26 @@
-<img src="<%= require('./logo.svg') %>">
-<h2>Rectangle Creator</h2>
-<p>Count: <input id="count" value="5"></p>
-<button id="create">Create</button>
-<button id="cancel">Cancel</button>
+
+<div class="tabs">
+    <button class="tab-item" data-tab-1>Term Card</button>
+    <button class="tab-item" data-tab-2>Merchant Card</button>
+    <button class="tab-item" data-tab-3>Cool Stuff</button>
+  </div>
+  
+  <div class="tab-page" id="term-card">
+    <p>Loan amount: <input id="principle" type="number" value="300" ></p>
+    <p>Term: <input id="term" type="number" value="3"></p>
+    <p>APR: <input id="apr" type="number" value="16.9"></p>
+    <button id="fill" class="primary-cta">Fill Data</button>
+  </div>
+  
+  <div class="tab-page" id="merchant-card" style="display: none;">
+    <p>This is merchant page</p>
+    <button class="primary-cta" id="create">Fill Image Data</button>
+  </div>
+  
+  <div class="tab-page" id="cool-stuff" style="display: none;">
+    <p>Stay tuned! More stuff to come!</p>
+  </div>
+  
+  
+  
+  <button class="text-button" id="cancel">Cancel</button>
