@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+body{
+  font-family: 'Inter', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 16px;
+}
 .tabs{
   border-top: none;
   border-right: none;
@@ -8,23 +21,26 @@
 }
 .tab-item-active{
   border-bottom: 1px solid #0F9CED !important;
-  color:#000;
+  color:#060809 !important;
   font-weight: 600;
-  outline:none;
-  
+  outline: none;
 }
+
 .tab-item{
   border: none;
-  padding: 8px 12px;
+  padding: 8px 16px;
   outline:none;
+  font-size: 12px;
+  color:#909293;
 }
 .primary-cta{
   background-color:rgb(15, 156, 237,0.12) ;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
+  letter-spacing: 0.2;
   color:#0F9CED;
   width: 100%;
-  height: 30px;
+  height: 36px;
   border: none;
   border-radius:4px;
   display: block;
@@ -32,9 +48,10 @@
   outline: none;
 }
 .text-button{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  color:#0F9CED;width: 245px;
+  color:#0F9CED;
+  width: 245px;
   height: 30px;
   border: none;
   display: block;
@@ -43,14 +60,75 @@
 }
 p{
   font-size: 13px;
+  color: #060809;
+  margin: 4px 0px;
 }
 input{
   outline: none;
   border: 1px solid #C8D3D9;
   border-radius: 2px;
-  height: 28px;
+  height: 32px;
+  width: 130px;
+  padding-left: 4px;
+  font-size:12px;
+  color:#060809;
 }
-body{
-  font-family: Arial, Helvetica, sans-serif;
+
+input:focus{
+  border: 1px solid #0F9CED;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.radio-tab{
+  display: flex;
+  padding: 8px 0px;
+  margin-bottom: 16px;
+}
+
+
+.radio-tab span{
+  border-left: 1px solid #C8D3D9;
+  border-top: 1px solid #C8D3D9;
+  border-bottom: 1px solid #C8D3D9;
+  height: 18px;
+  color: #060809;
+  width: 80px;
+  padding: 6px 22px;
+  font-size: 12px;
+}
+ 
+.radio-tab :last-child span{
+  border-radius: 0px 4px 4px 0px;
+  border-right: 1px solid #C8D3D9;
+}
+
+.radio-tab :first-child span{
+  border-radius: 4px 0px 0px 4px;
+  
+}
+
+.radio-tab input[type="radio"]{
+  display: none;
+}
+
+.radio-tab input[type="radio"]:checked ~ *{
+  background-color: rgb(15, 156, 237,0.12);
+  border: 1px solid #0F9CED;
+  color: #0F9CED;
+  font-weight: 400;
+}
+
+.tab-page{
+  padding: 16px;
+}
+
+
+
 

@@ -1,7 +1,6 @@
 import './ui.css'
 import {MERCHANT_LIST} from './data.js'
 
-console.log(MERCHANT_LIST);
 
 document.querySelector('#cancel').addEventListener('click', () => {
   parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
@@ -17,13 +16,17 @@ document.querySelector('.tab-item[data-tab-3]').addEventListener('click', () => 
   openTab('cool-stuff');
 })
 
+
+
 function getInputElement(selector) {
   return(document.querySelector(selector) as HTMLInputElement);
 }
 
+
 document.querySelector('#fill').addEventListener('click', () => {
   const principle = getInputElement('#principle').value;
-  const term = getInputElement('#term').value;
+  const term = getInputElement('input[name="term"]:checked').value;
+  console.log(term);
   const apr = getInputElement('#apr').value;
   parent.postMessage({ pluginMessage: { type: 'text-change',principle,term,apr } }, '*')
 })

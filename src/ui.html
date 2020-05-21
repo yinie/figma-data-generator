@@ -1,26 +1,38 @@
 
 <div class="tabs">
-    <button class="tab-item" data-tab-1>Term Card</button>
+    <button class="tab-item tab-item-active" data-tab-1>Term Card</button>
     <button class="tab-item" data-tab-2>Merchant Card</button>
     <button class="tab-item" data-tab-3>Cool Stuff</button>
-  </div>
+</div>
   
-  <div class="tab-page" id="term-card">
-    <p>Loan amount: <input id="principle" type="number" value="300" ></p>
-    <p>Term: <input id="term" type="number" value="3"></p>
-    <p>APR: <input id="apr" type="number" value="16.9"></p>
-    <button id="fill" class="primary-cta">Fill Data</button>
-  </div>
+<div class="tab-page" id="term-card">
+    <div class="flex-container">
+        <div><p>Loan amount ($)</p><input id="principle" type="number" value="300" ></div>
+        <div><p>APR (%)</p><input id="apr" type="number" value="16.9"></div>
+    </div>
+    
+    <div id="term">
+        <p>Term</p>
+        <div class="radio-tab">
+            <label><input type="radio" name="term" value="3" checked><span>3</span></label>
+            <label><input type="radio" name="term" value="6" ><span>6</span></label>
+            <label><input type="radio" name="term" value="12" ><span>12</span></label>
+            <label><input type="radio" name="term" value="24" ><span>24</span></label>
+            <label><input type="radio" name="term" value="36" ><span>36</span></label>
+        </div>
+    </div>
+    <button id="fill" class="primary-cta">Fill term card</button>
+</div>
   
-  <div class="tab-page" id="merchant-card" style="display: none;">
+<div class="tab-page" id="merchant-card" style="display: none;">
     <p>This is merchant page</p>
     <button class="primary-cta" id="create">Fill Image Data</button>
-  </div>
+</div>
   
-  <div class="tab-page" id="cool-stuff" style="display: none;">
+<div class="tab-page" id="cool-stuff" style="display: none;">
     <p>Stay tuned! More stuff to come!</p>
-  </div>
+</div>
   
   
   
-  <button class="text-button" id="cancel">Cancel</button>
+<button class="text-button" id="cancel">Cancel</button>
